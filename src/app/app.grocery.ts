@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 
+
 @Component({
     selector: 'app-grocery',
     templateUrl: './app.grocery.html',
@@ -11,11 +12,14 @@ import { Component } from '@angular/core';
 
 
 export class GroceryComponent {
-  task: string;
-  tasks = [];
 
-  onClick(){
-    this.tasks.push({name: this.task});
+  task!: string;
+  tasks: string[] = [];
+
+  onClick() {
+    console.log(this.task);
+    
+    this.tasks.push(this.task);
     this.task = '';
   }
 }
