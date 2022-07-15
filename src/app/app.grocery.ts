@@ -12,13 +12,10 @@ import { Component } from '@angular/core';
 
 
 export class GroceryComponent {
-
   task!: string;
   tasks: string[] = [];
 
   onClick() {
-    console.log(this.task);
-    
     this.tasks.push(this.task);
     this.task = '';
   }
